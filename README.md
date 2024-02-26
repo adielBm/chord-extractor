@@ -1,6 +1,6 @@
-A little python script i made to extract chords from an audio file (using Chordino) and visualize them in an HTML file along with chord diagrams (#TODO). you can also transpose the chords and view them in either guitar or ukulele mode.
+A little python script i made to extract chords from an audio file (using [ohollo/chord-extractor](https://github.com/ohollo/chord-extractor)) and visualize them in an HTML file along with chord diagrams (#TODO). you can also transpose the chords and view them in either guitar or ukulele mode.
 
-> Requirements: Python, Chordino and its requirements (see https://github.com/ohollo/chord-extractor)
+> Requirements: Python, [chord-extractor](https://github.com/ohollo/chord-extractor) and its requirements )
 
 ![Example](example.gif)
 
