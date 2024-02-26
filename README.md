@@ -2,6 +2,8 @@ A little python script i made to extract chords from an audio file (using Chordi
 
 > Requirements: Python, Chordino and its requirements (see https://github.com/ohollo/chord-extractor)
 
+<!-- example.gif -->
+
 ### Usage
 
 ```
