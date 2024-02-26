@@ -1,0 +1,54 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Chords from Audio</title>
+        <script src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+    <header>
+      <div>
+        <h4>File: C:\Users\Adiel\Music\Cavetown\Dear\cavetown - Dear. - 04 Talk to Me.flac</h4>
+        <audio controls>
+          <source
+            src="C:\Users\Adiel\Music\Cavetown\Dear\cavetown - Dear. - 04 Talk to Me.flac"
+            type="audio/mpeg"
+          />
+          Your browser does not support the audio element.
+        </audio>
+        <div>
+       
+          <button id="transpose-up">Transpose Up (+)</button>
+          <button id="transpose-down">Transpose Down (-)</button>
+          Transpose: <span id="transpose-counter">0</span>, Capo:
+          <span id="capo-counter">0</span>
+          <input
+            type="radio"
+            id="guitar"
+            name="instrument"
+            value="guitar"
+            checked
+          />
+          <label for="guitar">Guitar</label>
+          <input type="radio" id="ukulele" name="instrument" value="ukulele" />
+          <label for="ukulele">Ukulele</label>
+        </div>
+      </div>
+      <div id="chord-diagram-bar">
+        <img id="chord-diagram-current" src="empty.png"  />
+        <h1 id="chord-current"></h1>
+        <div style=" width: 2px; height: 100%; display: block; background: #8d94b4; margin: 15px; "></div>
+        <img id="chord-diagram-next" src="empty.png" />
+        <h1 id="chord-next"></h1>
+      </div>
+    </header>
+     <!-- btns for zoom in/out chords -->
+          <button id="zoom-in">zoom-in(+)</button>
+          <button id="zoom-out">zoom-out(-)</button>
+        <ul id="chords">
+    <li id='0.371519274'>N</li><li id='1.764716553'>F#m</li><li id='3.436553287'>B</li><li id='5.201269841'>E</li><li id='7.151746031'>C#m</li><li id='10.588299319'>B</li><li id='12.631655328'>B6</li><li id='21.640997732'>C#m</li><li id='23.405714285'>F#</li><li id='27.213786848'>Abm</li><li id='28.606984126'>C#m</li><li id='32.136417233'>B6</li><li id='35.758730158'>Ebm7</li><li id='41.424399092'>E</li><li id='45.418231292'>F#m</li><li id='46.625668934'>B6</li><li id='49.040544217'>C#m7</li><li id='52.84861678'>F#m</li><li id='53.963174603'>B6</li><li id='56.378049886'>E6</li><li id='60.279002267'>F#m</li><li id='61.39356009'>E6</li><li id='67.709387755'>F#m</li><li id='68.731065759'>B6</li><li id='70.960181405'>E6</li><li id='75.139773242'>C#m</li><li id='76.904489795'>Abm</li><li id='78.854965986'>A</li><li id='80.712562358'>E</li><li id='82.663038548'>C#m</li><li id='84.334875283'>Abm</li><li id='86.192471655'>A</li><li id='88.050068027'>E</li><li id='90.000544217'>F#m</li><li id='93.437097505'>B7</li><li id='97.245170068'>Ab</li><li id='100.774603174'>C#m</li><li id='104.768435374'>F#m</li><li id='108.204988662'>B</li><li id='110.898503401'>E</li><li id='123.065759637'>Abm</li><li id='126.78095238'>C#m7</li><li id='130.403265306'>F#m</li><li id='131.889342403'>B7</li><li id='134.304217687'>E</li><li id='137.833650793'>Abm</li><li id='141.548843537'>C#7</li><li id='145.171156462'>F#m</li><li id='146.378594104'>B7</li><li id='149.25786848'>F#m</li><li id='152.137142857'>B7</li><li id='156.316734693'>Ab</li><li id='158.824489795'>C#m</li><li id='163.561360544'>F#m</li><li id='166.997913832'>B7</li><li id='171.08462585'>Ab</li><li id='173.127981859'>C#m</li><li id='178.515011337'>F#m</li><li id='185.666757369'>B7</li><li id='193.190022675'>C#m</li><li id='194.583219954'>Abm</li><li id='197.276734693'>Amaj7</li><li id='199.041451247'>E</li><li id='202.478004535'>Abm</li><li id='205.264399092'>A</li><li id='207.121995464'>E/B</li><li id='208.979591836'>F#m7</li><li id='213.34494331'>B7</li><li id='216.409977324'>F#m7</li><li id='217.245895691'>Ab</li><li id='221.797006802'>C#m</li><li id='224.58340136'>F#m7</li><li id='229.041632653'>B7</li><li id='233.778503401'>E</li><li id='243.252244897'>F#m</li><li id='244.831201814'>B7</li><li id='246.688798185'>E</li><li id='248.639274376'>C#m</li><li id='250.589750566'>F#m</li><li id='252.168707482'>B7</li><li id='254.119183673'>E</li><li id='256.069659863'>C#m</li><li id='257.927256235'>F#m</li><li id='259.506213151'>B7</li><li id='261.456689342'>E</li><li id='263.407165532'>C#m</li><li id='265.357641723'>F#m</li><li id='266.750839002'>Abm</li><li id='267.865396825'>B7</li><li id='268.608435374'>E</li><li id='277.617777777'>N</li>
+        </ul>
+    </body>
+    </html>
+    

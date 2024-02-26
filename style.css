@@ -1,0 +1,73 @@
+ul#chords {
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+audio {
+  width: -webkit-fill-available;
+}
+
+header {
+  display: grid;
+  grid-template-columns: auto auto;
+  height: 130px;
+  position: sticky;
+  top: 0;
+  background: white;
+  border-radius: 0 0 10px 10px;
+  padding: 20px;
+  box-shadow: 1px 1px 10px;
+}
+
+#chord-diagram-current,
+#chord-diagram-next {
+  height: 100%;
+}
+
+#chord-diagram-next,
+#chord-next {
+  opacity: 0.7;
+}
+
+#chord-diagram-bar {
+  max-height: 150px;
+  display: flex;
+  align-items: flex-end;
+  width: 378px;
+}
+
+ul#chords li {
+  list-style: none;
+  background: #bbc6f8;
+  padding: 5px 10px;
+  font-size: 20px;
+  border-radius: 3px;
+}
+
+body {
+  margin: 0;
+  background: #8d94b4;
+  color: #00136c;
+  font-family: monospace;
+}
+
+/* Keyframes for the animation */
+@keyframes slideBackground {
+  from {
+    background-position: right;
+  }
+  to {
+    background-position: left;
+  } 
+}
+
+ul#chords li.active {
+  background: linear-gradient(to right, rgb(255, 255, 255) 50%, #bbc6f8 50%);
+  background-size: 200% 100%;
+  animation-name: slideBackground;
+  --animation-duration: 1s; /* Set a default value */
+  animation-duration: var(--animation-duration);
+  animation-timing-function: linear;
+}
