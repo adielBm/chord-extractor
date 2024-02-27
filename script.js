@@ -14,6 +14,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let instrument = "guitar";
 
+
+  /* lisetner for chords, when click, jump the audio to the time of the id element clicked  */
+  chords.forEach((chord) => {
+    chord.addEventListener("click", function () {
+      audio.currentTime = chord.id;
+      audio.play();
+    });
+  });
+
+
+
   /* handle <input type="radio" name="instrument" /> */
   document.querySelectorAll('input[name="instrument"]').forEach((input) => {
     input.addEventListener("change", function () {
@@ -81,26 +92,36 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(currentTime);
     chords.forEach((chord) => {
       if (chord.id <= currentTime) {
-        chord.classList.add("active");
+        chord.classList.add("actived");
       } else {
+        chord.classList.remove("actived");
         chord.classList.remove("active");
       }
 
       if (chord.id - currentTime <= 0.3 && chord.id - currentTime >= 0) {
+
+        chord.classList.add("active");
+
         if (chordCurrent.innerHTML != chord.innerHTML) {
           chordCurrent.innerHTML = chord.innerHTML;
-          chordDiagramCurrent.src = `${instrument}/${simplifyChord(
-            chord.innerHTML
+          chordDiagramCurrent.src = `${instrument}/${encodeURIComponent(
+            simplifyChord(chord.innerHTML)
           )}.png`;
         }
 
         if (chordNext.innerHTML != chord.nextElementSibling.innerHTML) {
           chordNext.innerHTML = chord.nextElementSibling.innerHTML;
-          chordDiagramNext.src = `${instrument}/${simplifyChord(
-            chord.nextElementSibling.innerHTML
+          chordDiagramNext.src = `${instrument}/${encodeURIComponent(
+            simplifyChord(chord.nextElementSibling.innerHTML)
           )}.png`;
         }
+      } else {
+        /* chord.classList.remove("active"); */
+
       }
+
+
+
     });
   }, 150);
 

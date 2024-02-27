@@ -44,6 +44,7 @@ ul#chords li {
   padding: 5px 10px;
   font-size: 20px;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 body {
@@ -63,6 +64,10 @@ body {
   } 
 }
 
+ul#chords li.actived {
+  background: white
+}
+
 ul#chords li.active {
   background: linear-gradient(to right, rgb(255, 255, 255) 50%, #bbc6f8 50%);
   background-size: 200% 100%;
@@ -71,3 +76,4 @@ ul#chords li.active {
   animation-duration: var(--animation-duration);
   animation-timing-function: linear;
 }
+
