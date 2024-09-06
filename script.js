@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let instrument = "guitar";
 
-
   /* lisetner for chords, when click, jump the audio to the time of the id element clicked  */
   chords.forEach((chord) => {
     chord.addEventListener("click", function () {
@@ -23,7 +22,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-
+  /* when user press on space key on keyboard play/pasue the audio */
+  document.addEventListener("keydown", function (event) {
+    if (event.code === "Space") {
+      event.preventDefault();
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  });
 
   /* handle <input type="radio" name="instrument" /> */
   document.querySelectorAll('input[name="instrument"]').forEach((input) => {
@@ -77,14 +86,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   transposeUpButton.addEventListener("click", function () {
     transposeChords(1);
-    transposeCounter.innerHTML = parseInt(transposeCounter.innerHTML) + 1;
-    capoCounter.innerHTML = transposeCounter.innerHTML * -1;
+    capoCounter.innerHTML = parseInt(capoCounter.innerHTML) - 1;
   });
 
   transposeDownButton.addEventListener("click", function () {
     transposeChords(-1);
-    transposeCounter.innerHTML = parseInt(transposeCounter.innerHTML) - 1;
-    capoCounter.innerHTML = transposeCounter.innerHTML * -1;
+    capoCounter.innerHTML = parseInt(capoCounter.innerHTML) + 1;
   });
 
   setInterval(function () {
@@ -99,7 +106,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       if (chord.id - currentTime <= 0.3 && chord.id - currentTime >= 0) {
-
         chord.classList.add("active");
 
         if (chordCurrent.innerHTML != chord.innerHTML) {
@@ -117,11 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       } else {
         /* chord.classList.remove("active"); */
-
       }
-
-
-
     });
   }, 150);
 
@@ -170,4 +172,5 @@ document.addEventListener("DOMContentLoaded", function () {
   function simplifyChord(chord) {
     return chord.replace(/\/.*/, "").replace("A#", "Bb").replace("D#", "Eb");
   }
+
 });
