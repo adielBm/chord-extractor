@@ -10,6 +10,9 @@ it's work for me on python 3.8.10
 
 ```
 C:\...\Music> python "C:\...\chord_extractor\cho.py" "song.mp3"
+
+# or youtube 
+> python "cho.py" "https://music.youtube.com/watch?v=32Oc2d_3yEk"
 ```
 
 ### TODO
