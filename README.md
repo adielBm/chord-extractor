@@ -2,7 +2,7 @@ A little python script i made to extract chords from an audio file (using [oholl
 
 > Requirements: Python, [chord-extractor](https://github.com/ohollo/chord-extractor) and its requirements )
 
-it works for me on python 3.8.10.
+it's work for me on python 3.8.10
 
 ![Example](example.gif)
 
