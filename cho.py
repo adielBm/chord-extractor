@@ -90,7 +90,10 @@ def generate_html_with_chords(audio_file, chords, imgurl, title):
     return html_file
 
 def open_html_in_browser(html_file: str) -> None:
-    os.system(f"start {html_file}")
+    if os.name == 'nt':  # For Windows
+        os.system(f"start {html_file}")
+    elif os.name == 'posix':  # For macOS and Linux
+        os.system(f"open {html_file}")
 
 def is_youtube_url(url: str) -> bool:
     return 'youtube.com' in url or 'youtu.be' in url
