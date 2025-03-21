@@ -1,0 +1,4 @@
+chord-extractor
+yt-dlp
+librosa
+vamp
