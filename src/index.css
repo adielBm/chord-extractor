@@ -1,5 +1,81 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flow-root;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+
 ul#chords {
   display: flex;
   padding: 10px;
@@ -7,11 +83,17 @@ ul#chords {
   flex-wrap: wrap;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
 div#control-bar {
+  grid-template-columns: 1fr;
   display: grid;
   gap: 10px;
 }
@@ -25,17 +107,20 @@ div#transpose-bar {
   grid-template-columns: repeat(5, 1fr);
   gap: 9px;
   align-items: center;
+
+  /* Center the content */
+  justify-content: center;
+
+
 }
 
 header {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr;
-  height: 180px;
+  grid-template-columns: 2fr 1fr 1fr;
   position: sticky;
   top: 0;
   gap: 30px;
   background: white;
-  border-radius: 0 0 10px 10px;
   padding: 10px;
   box-shadow: 1px 1px 10px;
   align-items: center;
@@ -64,11 +149,20 @@ button {
 }
 
 .chord-diagram-bar {
-  max-height: 150px;
-  display: flex;
-  align-items: flex-end;
-  width: 150px;
+  display: grid;
+  background: #f1f5ff;
+  border-radius: 10px;
+  justify-items: center;
+  font-size: xx-large;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
+
+.chord-diagram-bar svg {
+  height: 180px;
+}
+
 
 :root {
   --c1: #8197d0;
@@ -99,6 +193,7 @@ body {
   from {
     background-position: right;
   }
+
   to {
     background-position: left;
   }
@@ -112,7 +207,8 @@ ul#chords li.active {
   background: linear-gradient(to right, rgb(255, 255, 255) 50%, var(--c1) 50%);
   background-size: 200% 100%;
   animation-name: slideBackground;
-  --animation-duration: 1s; /* Set a default value */
+  --animation-duration: 1s;
+  /* Set a default value */
   animation-duration: var(--animation-duration);
   animation-timing-function: linear;
 }
@@ -123,7 +219,7 @@ input[type="radio"] {
 }
 
 /* type="radio" like button */
-input[type="radio"] + label {
+input[type="radio"]+label {
   text-align: center;
   font-size: 22px;
   height: 30px;
@@ -140,25 +236,25 @@ input[type="radio"] + label {
 }
 
 /* type="radio" like button */
-input[type="radio"]:checked + label {
+input[type="radio"]:checked+label {
   color: white;
   background: var(--c1);
 }
 
 /* type="radio" like button */
-input[type="radio"] + label:hover {
+input[type="radio"]+label:hover {
   color: var(--c2);
   background: white;
 }
 
 /* type="radio" like button */
-input[type="radio"]:checked + label:hover {
+input[type="radio"]:checked+label:hover {
   color: white;
   background: var(--c1);
 }
 
 /* type="radio" like button */
-input[type="radio"] + label:hover {
+input[type="radio"]+label:hover {
   color: var(--c2);
   background: white;
 }
