@@ -20,7 +20,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## MIT License - Acknowledgement for Included Files
+# Included Files
 
 This project includes code from David Rubert under the MIT License:
-- `guitar.json` and `ukulele.json` from [https://github.com/tombatossals/chords-db](https://github.com/tombatossals/chords-db) (Copyright Original Author David Rubert).
+- guitar.json and ukulele.json from https://github.com/tombatossals/chords-db (Copyright Original Author David Rubert).
