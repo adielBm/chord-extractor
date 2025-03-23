@@ -28,3 +28,7 @@ python chord.py path/to/your/file.mp3
 python chord.py https://www.youtube.com/watch?v=your_video_id
 ```
 
+## Acknowledgements
+
+This project includes code from David Rubert under the MIT License:
+- `guitar.json` and `ukulele.json` from [https://github.com/tombatossals/chords-db](https://github.com/tombatossals/chords-db) (Copyright Original Author David Rubert).
