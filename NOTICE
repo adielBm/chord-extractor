@@ -1,0 +1,5 @@
+This project includes from MIT-licensed sources:
+
+- `guitar.json` and `ukulele.json` from [https://github.com/tombatossals/chords-db](https://github.com/tombatossals/chords-db) (Copyright Original Author David Rubert)
+
+Each file retains its respective license.
